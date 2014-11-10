@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Trave!!ing</string>
+    <string name="app_name">Trave!ing</string>
     <string name="hello_world">Hello world!</string>
+    <string name="view_journey">查看旅程</string>
+    <string name="create_journey">新建旅程</string>
+    <string name="my_profile">我的资料</string>
+    <string name="title_activity_list">ListActivity</string>
+    <string name="action_settings">Settings</string>
 
 </resources>
