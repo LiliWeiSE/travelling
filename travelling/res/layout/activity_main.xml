@@ -21,7 +21,8 @@
             android:layout_marginTop="10dp"
             android:background="#07b5b3"
             android:textColor="#ffffff"
-            android:text="@string/view_journey" />
+            android:text="@string/view_journey"
+            android:onClick="gotoList" />
 
         <Button
             android:id="@+id/button2"
@@ -30,7 +31,8 @@
             android:layout_marginTop="10dp"
             android:background="#07b5b3"
             android:textColor="#ffffff"
-            android:text="@string/create_journey" />
+            android:text="@string/create_journey"
+            android:onClick="gotoNew" />
 
         <Button
             android:id="@+id/button3"

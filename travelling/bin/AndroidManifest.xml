@@ -24,7 +24,18 @@
         </activity>
         <activity
             android:name="com.example.traveing.ListActivity"
-            android:label="@string/title_activity_list" >
+            android:label="@string/title_activity_list"
+            android:parentActivityName="com.example.traveing.MainActivity" >
+        </activity>
+        <activity
+            android:name="com.example.traveing.NewJourneyActivity"
+            android:label="@string/title_activity_new_journey"
+            android:parentActivityName="com.example.traveing.MainActivity" >
+        </activity>
+        <activity
+            android:name="com.example.traveing.JourneyListActivity"
+            android:label="@string/title_activity_journey_list"
+            android:parentActivityName="com.example.traveing.ListActivity" >
         </activity>
     </application>
 
