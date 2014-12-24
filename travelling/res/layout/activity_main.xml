@@ -41,7 +41,8 @@
             android:layout_marginTop="10dp"
             android:background="#07b5b3"
             android:textColor="#ffffff"
-            android:text="@string/my_profile" />
+            android:text="@string/my_profile"
+            android:onClick="gotoProfile" />
     </LinearLayout>
 
     <ImageView

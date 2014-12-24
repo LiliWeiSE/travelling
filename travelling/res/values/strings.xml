@@ -13,5 +13,15 @@
     <string name="destination">目的地</string>
     <string name="date">日期</string>
     <string name="title_activity_journey_list">JourneyListActivity</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="user_name">昵称：</string>
+    <string name="gender">性别：</string>
+    <string name="weibo">微博：</string>
+    <string name="name_contant">Lilie</string>
+    <string name="gender_contant">女</string>
+    <string name="weibo_contant">LL_w</string>
+    <string name="action_add">add</string>
+    <string name="title_activity_add">AddActivity</string>
 
 </resources>

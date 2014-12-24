@@ -35,6 +35,7 @@
         android:layout_below="@+id/editText2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="@string/complete" />
+        android:text="@string/complete"
+        android:onClick="finish" />
 
 </RelativeLayout>

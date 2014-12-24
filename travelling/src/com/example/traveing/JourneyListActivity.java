@@ -31,10 +31,11 @@ public class JourneyListActivity extends Activity {
 		ActionBar actionBar=getActionBar();
 		actionBar.setDisplayHomeAsUpEnabled(true);
 		actionBar.setTitle("北京");
+		actionBar.setDisplayShowHomeEnabled(false);
 
 		mList  = new ArrayList<Map<String,Object>>();
 		Map<String, Object> map = new HashMap<String, Object>(); 
-		map.put("item_image", R.drawable.logo); 
+		map.put("item_image", R.drawable.bj); 
 		map.put("item_description",  "第一天出发"); 
 		mList.add(map);
 		mList.add(map);
@@ -62,11 +63,14 @@ public class JourneyListActivity extends Activity {
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
+		if (id == R.id.action_add) {
+			onAdd();
 		}
 		return super.onOptionsItemSelected(item);
 	}
 
-
+	public void onAdd() {
+		Intent intent = new Intent(JourneyListActivity.this, AddActivity.class);
+        startActivity(intent);
+	}
 }

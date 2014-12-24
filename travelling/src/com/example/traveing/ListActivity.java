@@ -39,7 +39,7 @@ public class ListActivity extends Activity {
         		Map<String, Object> map=mList.get(arg2);
         			
         		Intent intent = new Intent(ListActivity.this, JourneyListActivity.class);
-                     startActivity(intent);
+                startActivity(intent);
         }
 	}
 	
@@ -51,6 +51,7 @@ public class ListActivity extends Activity {
 		ActionBar actionBar=getActionBar();
 		actionBar.setDisplayHomeAsUpEnabled(true);
 		actionBar.setTitle("我的旅程");
+		actionBar.setDisplayShowHomeEnabled(false);
 
 		/*if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
@@ -73,25 +74,6 @@ public class ListActivity extends Activity {
 				mListView.setOnItemClickListener(new onListClickListener());
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.list, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
 
 	/**
 	 * A placeholder fragment containing a simple view.
