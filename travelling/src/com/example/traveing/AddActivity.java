@@ -6,6 +6,9 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import com.example.traveing.database.JourneyDAL;
+import com.example.traveing.database.RecordDAL;
+
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
@@ -16,14 +19,17 @@ import android.provider.MediaStore;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 public class AddActivity extends Activity {
-	final int CAMERA = 1;
-	String imgPath = null;
-	String imgName = null;
-	ImageView addImage = null;
-	File mFile = null;
+	private final int CAMERA = 1;
+	private String imgPath = null;
+	private String imgName = null;
+	private ImageView addImage = null;
+	private File mFile = null;
+	private long jid;
+	private EditText editText; 
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +40,8 @@ public class AddActivity extends Activity {
 		actionBar.setTitle("我的旅程");
 		actionBar.setDisplayShowHomeEnabled(false);
 		addImage = (ImageView) findViewById(R.id.imageButtonAdd);
+		editText = (EditText) findViewById(R.id.editDes);
+		jid = getIntent().getLongExtra("jid", -1);
 	}
 
 	@Override
@@ -100,6 +108,21 @@ public class AddActivity extends Activity {
 		}
 	}
 	public void onFinish() {
+		RecordDAL dal = new RecordDAL(this, jid);
+		if(mFile!=null)
+			dal.insert(jid, editText.getText().toString(), mFile.getPath());
+		else
+			dal.insert(jid, editText.getText().toString(), "");
 		
+		JourneyDAL jDal = new JourneyDAL(this);
+		String place = jDal.getPlace(jid);
+		
+		Intent intent = new Intent(this, JourneyListActivity.class);
+		intent.putExtra("place", place);
+		intent.putExtra("jid", jid);
+		
+		startActivity(intent);
+		finish();
+		//sdfghjkl;f not ready!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	}
 }

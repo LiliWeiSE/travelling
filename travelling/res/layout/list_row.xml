@@ -21,12 +21,4 @@
         android:textColor="#999999" 
         /> 
      
-    <TextView 
-        android:id="@+id/textState" 
-        android:layout_width="wrap_content" 
-        android:layout_height="wrap_content" 
-        android:layout_alignParentRight="true" 
-        android:textSize="14sp" 
-        android:textColor="#999999" 
-        /> 
 </RelativeLayout>
